@@ -1,3 +1,4 @@
+#!/bin/bash
 # Landsat Time Series Preprocessing 
 # Step 1
 # Find and extract the tar.gz file
