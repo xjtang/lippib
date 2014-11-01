@@ -1,3 +1,4 @@
+#!/bin/bash
 # Landsat Time Series Preprocessing 
 # Step 0
 # Check The Checksums of All File
