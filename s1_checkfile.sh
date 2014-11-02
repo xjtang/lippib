@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 0
+# Step 1
 # Check The Checksums of All File
 # One input argument sets the input folder
 # By Chris Holden
