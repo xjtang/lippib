@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 2
+# Step 3
 # Find and extract the tar.gz file
 # One input argument sets the input folder
 # By Chris Holden
