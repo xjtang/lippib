@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 1a
+# Step 2a
 # Split Data into Scenes
 # One input argument sets the input folder
 # By Xiaojing Tang
