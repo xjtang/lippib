@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 3
+# Step 4
 # Stack Layers Into Single Stack
 # Two input arguments, sets the input folder, and UTM zone
 # By Chris Holden
