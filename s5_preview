@@ -15,7 +15,7 @@ fi
 cd $1
 
 # get scene id
-sid = $(basename $1)
+sid=$(basename $1)
 
 # load modules
 module load gdal/1.10.0
