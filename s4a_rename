@@ -19,9 +19,9 @@ echo "Processing LT4s"
 
 # rename files
 for fullname in $(find ./ -name '*_LT4*' -type f); do
-    dname = $(dirname $fullname)
-    fname = $(basename $fullname)
-    newn = $dname/LND${fname:11}
+    dname=$(dirname $fullname)
+    fname=$(basename $fullname)
+    newn=$dname/LND${fname:11}
     echo $newn
     mv $fullname $newn
 done
