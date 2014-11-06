@@ -31,7 +31,7 @@ echo "Task index number : $SGE_TASK_ID"
 echo "=========================================================="
 
 # run bash script
-sp = $1
+sp=$1
 chmod u+x $sp
 $sp $2 $3
 
