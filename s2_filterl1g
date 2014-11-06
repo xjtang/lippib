@@ -23,10 +23,10 @@ fi
 for mtl in $(find ./ -name 'L*MTL.txt'); do
 
     # get image id
-    id = $(basename $(dirname $mtl))
+    id=$(basename $(dirname $mtl))
     
     # find sign of L1T
-    l1t = $(grep "L1T" $mtl)
+    l1t=$(grep "L1T" $mtl)
     
     # move L1G image to a separate folder
     if [ "$l1t" == "" ]; then
