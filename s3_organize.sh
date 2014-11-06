@@ -14,9 +14,9 @@ fi
 cd $1
 
 # total number of tar.gz files
-n = $(find ./ -maxdepth 1 -name '*tar.gz' | wc -l)
+n=$(find ./ -maxdepth 1 -name '*tar.gz' | wc -l)
 # initialize count
-i = 1
+i=1
 
 # loop through all tar.gz files
 for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
@@ -31,7 +31,7 @@ for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
     tar -xzvf $archive -C temp/
     
     # find ID based on MTL file's filename
-    mtl = $(find temp/ -name 'L*MTL.txt')
+    mtl=$(find temp/ -name 'L*MTL.txt')
     
     # test to make sure we found it
     if [ ! -f $mtl ]; then
@@ -40,7 +40,7 @@ for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
     fi
     
     # use AWK to remove _MTL.txt and extract pure ID
-    id = $(basename $mtl | awk -F '_' '{ print $1 }')
+    id=$(basename $mtl | awk -F '_' '{ print $1 }')
     
     # move archive into temporary folder and rename 
     mv $archive temp/$id.tar.gz
