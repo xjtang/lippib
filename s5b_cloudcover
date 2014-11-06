@@ -15,7 +15,7 @@ fi
 cd $1
 
 # get scene id
-sid = $(basename $1)
+sid=$(basename $1)
 
 for mtl in $(find ./ -name '*MTL.txt'); do
     id=$(basename $(dirname $mtl))
