@@ -13,9 +13,9 @@ fi
 cd $1
 
 # get total number of files
-n = $(find ./ -maxdepth 1 -name '*tar.gz' | wc -l)
+n=$(find ./ -maxdepth 1 -name '*tar.gz' | wc -l)
 # initiate count
-i = 1
+i=1
 
 # only level 1 directory will be processed
 for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
@@ -24,13 +24,13 @@ for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
     echo "<----- $i / $n: $(basename $archive)"
     
     # get scene id
-    sid = p${archive:3:2}r${archive:6:2}
+    sid=p${archive:3:2}r${archive:6:2}
 
     # create directory if not exist
     if [ ! -d $sid ]
 	    mkdir ./$sid 
     fi
-    td = ./$sid/    
+    td=./$sid/    
 
     # move tar file into folder
     mv $archive $td
