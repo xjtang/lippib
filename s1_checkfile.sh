@@ -27,7 +27,7 @@ for checksum in $(find ./ -name 'L*.cksum'); do
     fi
     
     # if archive exists, then validate checksum
-    test = $(cksum $archive)
+    test=$(cksum $archive)
     if [ "$test" != "$(cat $checksum)" ]; then
         echo "!!!!! WARNING $bn may be corrupted !!!!!"
     else
