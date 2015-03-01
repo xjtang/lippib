@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 2
+# Step 3
 # Filter L1G Images
 # One input argument sets the input folder
 # By Chris Holden
