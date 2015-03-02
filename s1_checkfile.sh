@@ -6,7 +6,7 @@
 # By Chris Holden
 # Modified by Xiaojing Tang
 
-# check if filder exist
+# check if folder exist
 if [ ! -d $1 ]; then
     echo "Error - $1 is not a directory"
 fi
