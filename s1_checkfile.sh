@@ -6,9 +6,9 @@
 # By Chris Holden
 # Modified by Xiaojing Tang
 
-# check if filder exist
+# check if folder exist
 if [ ! -d $1 ]; then
-    echo "Error - $here is not a directory"
+    echo "Error - $1 is not a directory"
 fi
 # set working directory
 cd $1
