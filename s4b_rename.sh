@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 4a
+# Step 4b
 # Rename All Images, Change LXX to LND
 # One input argument sets the input folder
 # By Chris Holden
