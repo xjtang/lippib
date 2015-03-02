@@ -27,11 +27,16 @@ for mtl in $(find ./ -name 'L*MTL.txt'); do
     
     # find sign of L1T
     l1t=$(grep "L1T" $mtl)
+    l1gt=$(grep "L1GT" $mtl)
     
     # move L1G image to a separate folder
     if [ "$l1t" == "" ]; then
-        echo "$id is not L1T"
-        mv $(dirname $mtl) L1G
+        if [ "$l1gt" == "" ]; then
+           echo "$id is L1G"
+           mv $(dirname $mtl) L1G
+        else
+           echo "$id is L1GT"
+        fi
     else
         echo "$id is L1T"
     fi
