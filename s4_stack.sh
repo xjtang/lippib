@@ -22,7 +22,7 @@ landsat_stack.py -q -p --files "L*band1.tif; L*band2.tif; L*band3.tif; L*band4.t
     -b "1; 1; 1; 1; 1; 1; 1; 1" \
     -n "-9999; -9999; -9999; -9999; -9999; -9999; -9999; 255" \
     --utm $2 -o "*_stack" \
-    --format "ENVI" --co "INTERLEAVE=BIP" --percentile=99 ./
+    --format "ENVI" --co "INTERLEAVE=BIP" --percentile=1 ./
     
 echo "done!"
     
