@@ -17,11 +17,8 @@ cd $1
 # load module
 module load batch_landsat
 
-# get scene id
-sid=$(basename $1)
-
 # run main script
-stack_nobs.py --dname 'L*' --format GTiff ./ ${sid}_nobs.gtif 2 3 4
+stack_nobs.py --dname 'L*' --format GTiff ./ nobs.gtif 2 3 4
 
 echo 'done!'
 
