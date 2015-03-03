@@ -14,9 +14,6 @@ fi
 # move to input folder
 cd $1
 
-# get scene id
-sid=$(basename $1)
-
 # load modules
 module load gdal/1.10.0
 module load batch_landsat
@@ -29,12 +26,12 @@ for stack in $(find ./ -name '*stack'); do
 done
 
 # create output drectory
-if [ ! -d ./${sid}_preview/ ]; then
-    mkdir ./${sid}_preview
+if [ ! -d ./preview/ ]; then
+    mkdir ./preview
 fi
 
 # move png
-mv ./*.png* ./${sid}_preview/
+mv ./*.png* ./preview/
 
 echo "done!"
 
