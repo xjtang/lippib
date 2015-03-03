@@ -14,12 +14,9 @@ fi
 # move to input directory
 cd $1
 
-# get scene id
-sid=$(basename $1)
-
 for mtl in $(find ./ -name '*MTL.txt'); do
     id=$(basename $(dirname $mtl))
-    echo $id,${id:0:3},${id:3:3},${id:6:3},${id:9:4},${id:13:3},$(grep "CLOUD_COVER" $mtl | tr -d ' ' | awk -F '=' '{ print $2 }') >> ${sid}_cloud.txt
+    echo $id,${id:0:3},${id:3:3},${id:6:3},${id:9:4},${id:13:3},$(grep "CLOUD_COVER" $mtl | tr -d ' ' | awk -F '=' '{ print $2 }') >> cloud.txt
 done
 
 echo 'done'
