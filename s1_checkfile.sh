@@ -14,7 +14,7 @@ fi
 cd $1
 
 # loop over cksum files
-for checksum in $(find ./ -name 'L*.cksum'); do
+for checksum in $(find ./ -name 'L*.md5'); do
 
     # find basename of file and remove extension to match up with archive
     bn=$(basename $checksum | awk -F '.' '{ print $1 }')
@@ -27,7 +27,7 @@ for checksum in $(find ./ -name 'L*.cksum'); do
     fi
     
     # if archive exists, then validate checksum
-    test=$(cksum $archive)
+    test=$(md5sum $archive)
     if [ "$test" != "$(cat $checksum)" ]; then
         echo "!!!!! WARNING $bn may be corrupted !!!!!"
     else
