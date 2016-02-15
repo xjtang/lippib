@@ -14,10 +14,10 @@ fi
 cd $1
 
 # main function
-for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
+for archive in $(find ./ -maxdepth 2 -name '*tar.gz'); do
     rm $archive
 done
-for archive in $(find ./ -maxdepth 1 -name '*.tif'); do
+for archive in $(find ./ -maxdepth 2 -name '*.tif'); do
     rm $archive
 done
     
