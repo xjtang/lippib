@@ -18,11 +18,11 @@ module load gdal/1.10.0
 module load batch_landsat
 
 # main function
-landsat_stack.py -q -p --files "L*band1.tif; L*band2.tif; L*band3.tif; L*band4.tif; L*band5.tif; L*band7.tif; L*band6.tif; L*cfmask.tif" \
+landsat_stack.py -q -p --files "L*sr*1.tif; L*sr*2.tif; L*sr*3.tif; L*sr*4.tif; L*sr*5.tif; L*sr*7.tif; L*61.tif; L*cfmask.tif" \
     -b "1; 1; 1; 1; 1; 1; 1; 1" \
     -n "-9999; -9999; -9999; -9999; -9999; -9999; -9999; 255" \
     --utm $2 -o "*_stack" \
-    --format "ENVI" --co "INTERLEAVE=BIP" --percentile=1 ./
+    --format "ENVI" --co "INTERLEAVE=BIP" --$3=$4 ./
     
 echo "done!"
     
