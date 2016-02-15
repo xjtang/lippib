@@ -46,7 +46,7 @@ for archive in $(find ./ -maxdepth 1 -name '*tar.gz'); do
     mv $archive temp/$id.tar.gz
     
     # move checksum into temporary folder and rename
-    cksm=${archive/tar.gz/cksum}
+    cksm=${archive/tar.gz/md5}
     mv $cksm temp/$id.cksum
     
     # rename archive
