@@ -27,8 +27,9 @@ for checksum in $(find ./ -name 'L*.md5'); do
     fi
     
     # if archive exists, then validate checksum
-    test=$(md5sum $archive)
-    if [ "$test" != "$(cat $checksum)" ]; then
+    test1=($(md5sum $archive))
+    test2=($(cat $checksum))
+    if [ "${test1[0]}" != "${test2[0]}" ]; then
         echo "!!!!! WARNING $bn may be corrupted !!!!!"
     else
         echo "$bn is ok"
