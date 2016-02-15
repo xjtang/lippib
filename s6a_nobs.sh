@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 5a
+# Step 6a
 # Generate Number of Clear Observation Image
 # One input argument sets the input folder
 # By Chris Holden

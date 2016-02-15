@@ -1,6 +1,6 @@
 #!/bin/bash
 # Landsat Time Series Preprocessing 
-# Step 5
+# Step 6
 # Generate Preview Images
 # One input argument sets the input folder
 # By Chris Holden

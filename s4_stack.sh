@@ -2,7 +2,7 @@
 # Landsat Time Series Preprocessing 
 # Step 4
 # Stack Layers Into Single Stack
-# Two input arguments, sets the input folder, and UTM zone
+# Four input arguments, set the input folder, UTM zone and resize method
 # By Chris Holden
 # Modified by Xiaojing Tang
 
