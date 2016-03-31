@@ -2,13 +2,18 @@
 # Landsat Time Series Preprocessing 
 # Step 6
 # Generate Preview Images
-# One input argument sets the input folder
+# Two input argument sets the input folder and output folder
 # By Chris Holden
 # Modified by Xiaojing Tang
 
 # check if input folder exist
 if [ ! -d $1 ]; then
     echo "Error - $1 is not a directory"
+fi
+
+# check output directory
+if [ ! -d $2 ]; then
+    mkdir $2
 fi
 
 # move to input folder
@@ -22,16 +27,8 @@ module load batch_landsat
 for stack in $(find ./ -name '*stack'); do
     id=$(basename $(dirname $stack))
     echo "Making preview image for $id"
-    gen_preview.py --maskval "2 3 4 255" --format PNG -b "5 4 3" --resize_pct 25 --manual "0 8000" $stack ${id}_preview.png
+    gen_preview.py --maskval "2 3 4 255" --format PNG -b "5 4 3" --resize_pct 25 --manual "0 8000" $stack $2${id}_preview.png
 done
-
-# create output drectory
-if [ ! -d ./preview/ ]; then
-    mkdir ./preview
-fi
-
-# move png
-mv ./*.png* ./preview/
 
 echo "done!"
 
