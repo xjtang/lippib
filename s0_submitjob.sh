@@ -17,6 +17,9 @@
 # job name
 #$ -N Landsat_PreProcessing
 
+# Join standard output and error to a single file
+#$ -j y
+
 # log file
 #$ -o qlog.txt
 
